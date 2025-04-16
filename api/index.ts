@@ -1,10 +1,9 @@
-import { eventHandler, getRequestURL } from "vinxi/http";
+import { eventHandler } from "vinxi/http";
 
 export default eventHandler(async (event) => {
-  console.log("Request received:", event);
-  const url = getRequestURL(event);
+  console.log("Request received:", event.node.req);
 
-  const { pathname } = new URL(url);
+  const { pathname } = event.node.req;
 
   if (pathname === "/api/hello") {
     return "Hello World!";

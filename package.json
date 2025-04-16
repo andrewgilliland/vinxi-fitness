@@ -1,16 +1,25 @@
 {
-  "name": "Vinxi",
+  "name": "vinxi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vinxi dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.7.1",
   "dependencies": {
+    "@vinxi/react": "^0.2.5",
+    "@vitejs/plugin-react": "^4.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "vinxi": "^0.5.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2"
   }
 }

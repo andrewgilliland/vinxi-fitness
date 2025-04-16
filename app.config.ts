@@ -1,3 +1,4 @@
+import reactRefresh from "@vitejs/plugin-react";
 import { createApp } from "vinxi";
 
 export default createApp({
@@ -7,6 +8,13 @@ export default createApp({
       type: "http",
       base: "/api",
       handler: "./api/index.ts",
+    },
+    {
+      name: "client",
+      type: "spa",
+      handler: "./index.html",
+      target: "browser",
+      plugins: () => [reactRefresh()],
     },
   ],
 });
